@@ -1,0 +1,59 @@
+html{
+    scroll-behavior: smooth;  
+}
+
+#navegacao{
+    min-height: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    
+}
+#logo{
+    min-height: 10vh;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 0;
+}
+#login{
+    min-height: 10vh;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+}
+#lista{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    left: 50%;
+}
+
+
+#secao-home{
+    background-color: aqua;
+    min-height: 100vh;
+}
+#secao-agenda{
+    background-color: blueviolet;
+    min-height: 100vh;
+}
+#secao-quemSomos{
+    background-color: blue;
+    min-height: 80vh;
+}
+#rodape{
+    min-height: 20vh;
+    background-color: #242424;
+}
+#lista{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
