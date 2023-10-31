@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'barber';
+    src: url(/Assets/fonts/RichTheBarberPersonalUse-gx824.ttf);
+}
+
 html{
     scroll-behavior: smooth;  
 }
@@ -9,11 +14,12 @@ html{
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    top:40px;
     
 }
 #logo{
     min-height: 10vh;
-    width: 200px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,7 +27,7 @@ html{
 }
 #login{
     min-height: 10vh;
-    width: 200px;
+    width: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,4 +62,26 @@ html{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#logo-img{
+    width: 40px;
+    stroke: #fff;
+    fill: #fff;
+}
+#logo-texto{
+    font-family: 'barber';
+    color: aliceblue;
+    font-size: 40px;
+}
+.fa-solid{
+    font-size: 32px;
+}
+
+#banner{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+#banner-imagem{
+    width: 100%;
 }
