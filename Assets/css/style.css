@@ -3,6 +3,11 @@
     src: url(/Assets/fonts/RichTheBarberPersonalUse-gx824.ttf);
 }
 
+@font-face {
+    font-family: 'Queen';
+    src: url(/Assets/fonts/Queensides-3z7Ey.ttf);
+  }
+
 html{
     scroll-behavior: smooth;  
 }
@@ -15,73 +20,75 @@ html{
     justify-content: space-between;
     position: fixed;
     top:40px;
+    z-index: 1;
     
 }
 #logo{
     min-height: 10vh;
     width: 300px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     right: 0;
+
 }
 #login{
     min-height: 10vh;
     width: 300px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:right;
     left: 0;
 }
+
+#icon-login{
+    font-size: 24px;
+    color: #fff;
+    margin-right: 80px;
+}
+#icon-login:hover{
+    cursor: pointer;
+    color: #EFB43A;
+    transition: 0.3s;
+}
+
+
 #lista{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
+    gap: 4rem;
     left: 50%;
 }
 
-
-#secao-home{
-    background-color: aqua;
-    min-height: 100vh;
-}
-#secao-agenda{
-    background-color: blueviolet;
-    min-height: 100vh;
-}
-#secao-quemSomos{
-    background-color: blue;
-    min-height: 80vh;
-}
-#rodape{
-    min-height: 20vh;
-    background-color: #242424;
-}
-#lista{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#logo-img{
-    width: 40px;
-    stroke: #fff;
-    fill: #fff;
-}
-#logo-texto{
-    font-family: 'barber';
-    color: aliceblue;
-    font-size: 40px;
-}
-.fa-solid{
-    font-size: 32px;
-}
-
-#banner{
-    width: 100%;
+.parallax {
     height: 100vh;
-    overflow: hidden;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-#banner-imagem{
-    width: 100%;
+
+#secao-home {
+    background-image: url("/Assets/img/banner.jpg");
 }
+
+#secao-agenda {
+    background-image: url("/Assets/img/fundo-agenda.jpg");
+    background-position: center bottom;
+}
+
+#secao-quemSomos{
+    background-image: url("/Assets/img/img-fundo.jpg");
+}
+
+.parallax-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
+    color: white; /* Cor do texto */
+}
+
