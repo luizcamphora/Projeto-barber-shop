@@ -4,44 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barber-shop</title>
+    <!-- Inclusão dos arquivos de estilo -->
     <link rel="stylesheet" href="/Assets/css/reset.css">
     <link rel="stylesheet" href="/Assets/css/style.css">
 </head>
 <body>
+   <!-- Barra de Navegação -->
    <nav id="navegacao">
     <div id="logo"> 
+        <!-- Logo da Barber Shop -->
         <p id="logo-texto">BARBER SHOP</p>
         <p id="logo-since">Desde de 1982</p>  
     </div>
     <div id="menu">
         <ul id="lista">
             <li id="lista-menu"><a href="#secao-home" id="lista-link">HOME</a></li>
+            <li id="lista-menu"><a href="#secao-servico" id="lista-link">SERVIÇOS</a></li>
             <li id="lista-menu"><a href="#secao-agenda" id="lista-link">AGENDA</a></li>
             <li id="lista-menu"><a href="#secao-quemSomos" id="lista-link">QUEM SOMOS</a></li>
         </ul>
     </div>
     <div id="login">
+        <!-- Ícone de Login -->
         <i class="fa-solid fa-right-to-bracket" id="icon-login"></i>
     </div>
    </nav>
+   <!-- Conteúdo Principal -->
    <main class="principal">
     <section id="secao-home" class="parallax">
-        <div class="parallax-content">
-    
+        <!-- Seção de Início (Home) -->
+        <div id="banner">
+            <p id="texto-banner-small">Fazemos sua barba da maneira clássica:</p>
+            <p id="texto-banner-bold">com navalha e toalha quente</p>
+            <div id="botao-banner">
+                <button id="botao-banner-servico">SERVIÇOS</button>
+            </div>      
         </div>
+        <div id="icone-redes">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-twitter"></i>
+        </div>
+    </section>
+    <section id="secao-servico" class="parallax">
+        <!-- Seção de Serviços -->
+        <div id="servico">
+            <div id="servico-tabela">
+                <img src="/Assets/img/tebela-servico.jpg" alt="" id="servico-tabela-img">
+                <div id="botao-tabela">
+                    <button id="botao-tabela-agendar">AGENDAR</button>
+                </div>
+            </div>
+            
+        </div>
+
     </section>
     <section id="secao-agenda" class="parallax">
-        <div class="parallax-content">
-    
-        </div>
+        <!-- Seção de Agenda -->
     </section>
     <section id="secao-quemSomos" class="parallax">
-        <div class="parallax-content">
-
-        </div>
+        <!-- Seção de Quem Somos -->
     </section>
 </main>
+   <!-- Rodapé -->
    <footer id="rodape"></footer>
+   <!-- Inclusão do Kit de Font Awesome -->
    <script src="https://kit.fontawesome.com/95932c07d1.js" crossorigin="anonymous"></script>
 </body>
 </html>

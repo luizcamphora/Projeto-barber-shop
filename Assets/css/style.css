@@ -1,3 +1,4 @@
+/* Definição de fontes personalizadas para o logotipo */
 @font-face {
     font-family: 'barber';
     src: url(/Assets/fonts/RichTheBarberPersonalUse-gx824.ttf);
@@ -6,24 +7,27 @@
 @font-face {
     font-family: 'Queen';
     src: url(/Assets/fonts/Queensides-3z7Ey.ttf);
-  }
-
-html{
-    scroll-behavior: smooth;  
 }
 
-#navegacao{
-    min-height: 10vh;
+/* Configuração global de scroll suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilos para a barra de navegação (navbar) */
+#navegacao {
+    min-height: 15vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    top:40px;
     z-index: 1;
-    
+    background-color: rgba(0, 0, 0, 0.8);
 }
-#logo{
+
+/* Estilos para o logotipo */
+#logo {
     min-height: 10vh;
     width: 300px;
     display: flex;
@@ -31,30 +35,50 @@ html{
     align-items: center;
     justify-content: center;
     right: 0;
-
 }
-#login{
+
+#logo-texto {
+    font-family: 'barber';
+    color: #fff;
+    font-size: 40px;
+    border-top: #fff 1px solid;
+    border-bottom: #fff 1px solid;
+}
+
+#logo-texto:hover {
+    color: #EFB43A;
+    transition: 3ms;
+}
+
+#logo-since {
+    color: #fff;
+    font-family: 'Queen';
+}
+
+/* Estilos para o ícone de login */
+#login {
     min-height: 10vh;
     width: 300px;
     display: flex;
     align-items: center;
-    justify-content:right;
+    justify-content: right;
     left: 0;
 }
 
-#icon-login{
+#icon-login {
     font-size: 24px;
     color: #fff;
     margin-right: 80px;
 }
-#icon-login:hover{
+
+#icon-login:hover {
     cursor: pointer;
     color: #EFB43A;
     transition: 0.3s;
 }
 
-
-#lista{
+/* Estilos para o menu da barra de navegação */
+#lista {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,6 +86,18 @@ html{
     left: 50%;
 }
 
+#lista-link {
+    color: #fff;
+    font-family: 'Queen';
+    text-decoration: none;
+}
+
+#lista-link:hover {
+    color: #EFB43A;
+    transition: 3ms;
+}
+
+/* Estilos para as seções com efeito de parallax */
 .parallax {
     height: 100vh;
     background-attachment: fixed;
@@ -70,25 +106,133 @@ html{
     background-size: cover;
 }
 
+/* Estilos para a seção "HOME" */
 #secao-home {
     background-image: url("/Assets/img/banner.jpg");
 }
+#banner{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#texto-banner-small{
+    color: #fff;
+    font-family: 'Queen';
+    font-size: 40px;
+    margin-top: 160px;
+}
+#texto-banner-bold{
+    color: #fff;
+    font-family: 'Queen';
+    font-size: 80px;
+    font-weight: bold;
+}
+#botao-banner{
+    width: 240px;
+    height: 60px;
+    background-color: #EFB43A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 24px;
+}
+#botao-banner-servico{
+    background-color: #EFB43A;
+    border: #242424 1px solid;
+    width: 230px;
+    height: 50px;
+    font-family: 'Queen';
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;   
+}
+#botao-banner-servico:hover{
+    color: #fff;
+    transition: 3ms;
+    background-color: #f3b02b;
+    cursor: pointer;
+}
+#icone-redes{
+    position: absolute;
+    top: 120px;
+    right: 80px;
+}
+.fa-brands{
+    color: #fff;
+    font-size: 24px;
+    margin-left: 16px;
+}
+.fa-brands:hover{
+    color: #EFB43A;
+    transition: 3ms;
+    cursor: pointer;
+}
 
+/* Estilos para a seção "SERVIÇOS" */
+#secao-servico {
+    background-image: url("/Assets/img/papel_de_parede_servicos.jpg");
+    width: 100%;
+    height: 100vh;
+}
+#servico-tabela{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#servico-tabela-img{
+    width: 60%;
+    margin-top: 42px;
+}
+#botao-tabela{
+    position: absolute;
+    background-color: #EFB43A;
+    width: 210px;
+    height: 60px;
+    top: 79vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#botao-tabela-agendar{
+    width: 200px;
+    height: 50px;
+    background-color: #EFB43A;
+    border: #242424 1px solid;
+    font-family: 'Queen';
+    font-size: 20px;
+    font-weight: bold;
+}
+#botao-tabela-agendar:hover{
+    color: #fff;
+    transition: 3ms;
+    background-color: #f3b02b;
+    cursor: pointer;
+}
+
+
+/* Estilos para a seção "AGENDA" */
 #secao-agenda {
     background-image: url("/Assets/img/fundo-agenda.jpg");
     background-position: center bottom;
 }
 
-#secao-quemSomos{
+
+
+/* Estilos para a seção "QUEM SOMOS" */
+#secao-quemSomos {
     background-image: url("/Assets/img/img-fundo.jpg");
+    height: 80vh;
 }
 
-.parallax-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo com transparência */
-    color: white; /* Cor do texto */
+/* Estilos para o rodapé */
+#rodape {
+    width: 100%;
+    height: 20vh;
+    background-color: #242424;
 }
-
