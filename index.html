@@ -1,75 +1,212 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barber-shop</title>
     <!-- Inclusão dos arquivos de estilo -->
+
     <link rel="stylesheet" href="/Assets/css/reset.css">
     <link rel="stylesheet" href="/Assets/css/style.css">
+
 </head>
+
 <body>
-   <!-- Barra de Navegação -->
-   <nav id="navegacao">
-    <div id="logo"> 
-        <!-- Logo da Barber Shop -->
-        <p id="logo-texto">BARBER SHOP</p>
-        <p id="logo-since">Desde de 1982</p>  
-    </div>
-    <div id="menu">
-        <ul id="lista">
-            <li id="lista-menu"><a href="#secao-home" id="lista-link">HOME</a></li>
-            <li id="lista-menu"><a href="#secao-servico" id="lista-link">SERVIÇOS</a></li>
-            <li id="lista-menu"><a href="#secao-agenda" id="lista-link">AGENDA</a></li>
-            <li id="lista-menu"><a href="#secao-quemSomos" id="lista-link">QUEM SOMOS</a></li>
-        </ul>
-    </div>
-    <div id="login">
-        <!-- Ícone de Login -->
-        <i class="fa-solid fa-right-to-bracket" id="icon-login"></i>
-    </div>
-   </nav>
-   <!-- Conteúdo Principal -->
-   <main class="principal">
-    <section id="secao-home" class="parallax">
+    <!-- Barra de Navegação -->
+    <nav id="navegacao">
+        <div id="logo">
+            <!-- Logo da Barber Shop -->
+            <p id="logo-texto">BARBER SHOP</p>
+            <p id="logo-since">Desde de 1982</p>
+        </div>
+        <div id="menu">
+            <ul id="lista">
+                <li id="lista-menu"><a href="#secao-home" id="lista-link">HOME</a></li>
+                <li id="lista-menu"><a href="#secao-servico" id="lista-link">SERVIÇOS</a></li>
+                <li id="lista-menu"><a href="#secao-agenda" id="lista-link">AGENDA</a></li>
+                <li id="lista-menu"><a href="#secao-quemSomos" id="lista-link">QUEM SOMOS</a></li>
+            </ul>
+        </div>
+        <div id="login">
+            <!-- Ícone de Login -->
+            <i class="fa-solid fa-right-to-bracket" id="icon-login"></i>
+        </div>
+    </nav>
+    <!-- Conteúdo Principal -->
+    <main class="principal">
+
         <!-- Seção de Início (Home) -->
-        <div id="banner">
-            <p id="texto-banner-small">Fazemos sua barba da maneira clássica:</p>
-            <p id="texto-banner-bold">com navalha e toalha quente</p>
-            <div id="botao-banner">
-                <button id="botao-banner-servico">SERVIÇOS</button>
-            </div>      
-        </div>
-        <div id="icone-redes">
-            <i class="fa-brands fa-facebook"></i>
-            <i class="fa-brands fa-instagram"></i>
-            <i class="fa-brands fa-youtube"></i>
-            <i class="fa-brands fa-twitter"></i>
-        </div>
-    </section>
-    <section id="secao-servico" class="parallax">
-        <!-- Seção de Serviços -->
-        <div id="servico">
-            <div id="servico-tabela">
-                <img src="/Assets/img/tebela-servico.jpg" alt="" id="servico-tabela-img">
-                <div id="botao-tabela">
-                    <button id="botao-tabela-agendar">AGENDAR</button>
+        <section id="secao-home" class="parallax">
+
+            <!-- Banner -->
+
+            <div id="banner">
+                <p id="texto-banner-small">Fazemos sua barba da maneira clássica:</p>
+                <p id="texto-banner-bold">com navalha e toalha quente</p>
+                <div id="botao-banner">
+                    <button id="botao-banner-servico">SERVIÇOS</button>
                 </div>
             </div>
-            
-        </div>
 
-    </section>
-    <section id="secao-agenda" class="parallax">
-        <!-- Seção de Agenda -->
-    </section>
-    <section id="secao-quemSomos" class="parallax">
-        <!-- Seção de Quem Somos -->
-    </section>
-</main>
-   <!-- Rodapé -->
-   <footer id="rodape"></footer>
-   <!-- Inclusão do Kit de Font Awesome -->
-   <script src="https://kit.fontawesome.com/95932c07d1.js" crossorigin="anonymous"></script>
+            <!-- Links Redes Sociais -->
+
+            <div id="icone-redes">
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-youtube"></i>
+                <i class="fa-brands fa-twitter"></i>
+            </div>
+        </section>
+
+        <!-- Seção de Serviços -->
+
+        <section id="secao-servico" class="parallax">
+
+            <div id="servico">
+                <div id="servico-tabela">
+                    <img src="/Assets/img/tebela-servico.jpg" alt="" id="servico-tabela-img">
+                    <div id="botao-tabela">
+                        <button id="botao-tabela-agendar">AGENDAR</button>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="secao-agenda" class="parallax">
+            <!-- Seção de Agenda -->
+            <div id="agenda">
+                <!-- Seção de Agenda - Tipo de Serviço -->
+                <div id="selecionar-servico">
+
+                    <div id="agenda-titulos">
+                        <p>TIPO DE SERVIÇO</p>
+                    </div>
+
+                    <!-- Barba -->
+
+                    <p id="servico-titulo">BARBA</p>
+                    <div id="conteudo-servico">
+                        <p id="barba-tradicional">TRADICIONAL</p>
+                        <input type="checkbox" name="tradicional-checkbox" id="tradicional-checkbox" data-text="Barba tradicional............................R$45">
+                    </div>
+                    <div id="conteudo-servico">
+                        <p id="barba-desenhada">DESENHADA</p>
+                        <input type="checkbox" name="desenhada-checkbox" id="desenhada-checkbox" data-text="Barba desenhada............................R$40">
+                    </div>
+                    <div id="conteudo-servico">
+                        <p id="barba-tradicional">HIDRATAÇÃO</p>
+                        <input type="checkbox" name="hidratacao-checkbox" id="hidratacao-checkbox" data-text="Barba hidratação............................R$20">
+                    </div>
+
+                    <!-- Cabelo -->
+
+                    <p id="servico-titulo">CABELO</p>
+                    <div id="conteudo-servico">
+                        <p id="barba-tradicional">CORTE</p>
+                        <input type="checkbox" name="corte-checkbox" id="corte-checkbox" data-text="Corte de cabelo...............................R$45">
+                    </div>
+                    <div id="conteudo-servico">
+                        <p id="barba-tradicional">PEZINHO</p>
+                        <input type="checkbox" name="pezinho-checkbox" id="pezinho-checkbox" data-text="Pezinho...........................................R$15">
+                    </div>
+                    <div id="conteudo-servico">
+                        <p id="barba-tradicional">SÓ MÁQUINA</p>
+                        <input type="checkbox" name="somaquina-checkbox" id="somaquina-checkbox" data-text="Corte apenas com máquina............R$25">
+                    </div>
+                    <div id="conteudo-servico">
+                        <p id="barba-tradicional">DESENHO</p>
+                        <input type="checkbox" name="desenho-checkbox" id="desenho-checkbox" data-text="Corte desenhado.............................R$50">
+                    </div>
+                    <div id="conteudo-servico">
+                        <p id="barba-tradicional">TINTURA</p>
+                        <input type="checkbox" name="titura-checkbox" id="titura-checkbox" data-text="Tintura............................................R$30">
+                    </div>
+                </div>
+
+                <!-- Seção de Agenda - Selecionar data -->
+
+                <div id="selecionar-data">
+                    <div id="agenda-titulos">
+                        <p>DATA</p>
+                    </div>
+
+                    <!-- Calendário -->
+
+                    <div id="calendario">
+                        <div class="controls">
+                            <button id="prevMonth"><i class="fa-solid fa-backward"></i></button>
+                            <span id="currentMonthYear"></span>
+                            <button id="nextMonth"><i class="fa-solid fa-forward"></i></button>
+                        </div>
+                        <div id="semana">
+                            <div id="semana-dia">Dom</div>
+                            <div id="semana-dia">Seg</div>
+                            <div id="semana-dia">Ter</div>
+                            <div id="semana-dia">Qua</div>
+                            <div id="semana-dia">Qui</div>
+                            <div id="semana-dia">Sex</div>
+                            <div id="semana-dia">Sab</div>
+                        </div>
+                        <div class="calendar" id="calendar"></div>
+
+                    </div>
+
+                    <div id="data-espaco"></div>
+                </div>
+                <div id="selecionar-horario">
+                    <div id="agenda-titulos">
+                        <p>HORÁRIO</p>
+                    </div>
+                    <div id="horarios">
+                        <div id="primeira-coluna-horario">
+                            <div id="hora">10:00</div>
+                            <div id="hora">11:00</div>
+                            <div id="hora">14:00</div>
+                            <div id="hora">15:00</div>
+                            <div id="hora">16:00</div>
+                        </div>
+                        <div id="segunda-coluna-horario">
+                            <div id="hora">17:00</div>
+                            <div id="hora">18:00</div>
+                            <div id="hora">19:00</div>
+                            <div id="hora">20:00</div>
+                            <div id="hora">21:00</div>
+                        </div>
+                    </div>
+                    <div id="horario-espaco"></div>
+                </div>
+                <div id="detalhes-resultado">
+                    <div id="agenda-titulos">
+                        <p>DETALHES DO ATENDIMENTO</p>
+                    </div>
+
+                    <div id="servico-selecionado">
+                        <p id="selecionado-titulo">Serviço:</p>
+                        <div class="resultado" id="resultado"></div>
+                    </div>
+                    
+                    <div id="data-selecionada">
+                        <p id="selecionado-titulo">Data do agendamento:</p>
+                        <div class="result" id="result"></div>
+                    </div>
+                    
+
+                </div>
+            </div>
+        </section>
+        <section id="secao-quemSomos" class="parallax">
+            <!-- Seção de Quem Somos -->
+        </section>
+    </main>
+    <!-- Rodapé -->
+    <footer id="rodape"></footer>
+
+    <!-- Inclusão do Kit de Font Awesome -->
+    <script src="https://kit.fontawesome.com/95932c07d1.js" crossorigin="anonymous"></script>
+    <!-- Link javaScript -->
+    <script src="/Assets/js/script.js"></script>
 </body>
+
 </html>
