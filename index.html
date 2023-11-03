@@ -89,15 +89,18 @@
                     <p id="servico-titulo">BARBA</p>
                     <div id="conteudo-servico">
                         <p id="barba-tradicional">TRADICIONAL</p>
-                        <input type="checkbox" name="tradicional-checkbox" id="tradicional-checkbox" data-text="Barba tradicional............................R$45">
+                        <input type="checkbox" name="tradicional-checkbox" id="tradicional-checkbox"
+                            data-text="Barba tradicional.........................................R$45">
                     </div>
                     <div id="conteudo-servico">
                         <p id="barba-desenhada">DESENHADA</p>
-                        <input type="checkbox" name="desenhada-checkbox" id="desenhada-checkbox" data-text="Barba desenhada............................R$40">
+                        <input type="checkbox" name="desenhada-checkbox" id="desenhada-checkbox"
+                            data-text="Barba desenhada.......................................R$40">
                     </div>
                     <div id="conteudo-servico">
                         <p id="barba-tradicional">HIDRATAÇÃO</p>
-                        <input type="checkbox" name="hidratacao-checkbox" id="hidratacao-checkbox" data-text="Barba hidratação............................R$20">
+                        <input type="checkbox" name="hidratacao-checkbox" id="hidratacao-checkbox"
+                            data-text="Barba hidratação........................................R$20">
                     </div>
 
                     <!-- Cabelo -->
@@ -105,27 +108,32 @@
                     <p id="servico-titulo">CABELO</p>
                     <div id="conteudo-servico">
                         <p id="barba-tradicional">CORTE</p>
-                        <input type="checkbox" name="corte-checkbox" id="corte-checkbox" data-text="Corte de cabelo...............................R$45">
+                        <input type="checkbox" name="corte-checkbox" id="corte-checkbox"
+                            data-text="Corte de cabelo............................................R$45">
                     </div>
                     <div id="conteudo-servico">
                         <p id="barba-tradicional">PEZINHO</p>
-                        <input type="checkbox" name="pezinho-checkbox" id="pezinho-checkbox" data-text="Pezinho...........................................R$15">
+                        <input type="checkbox" name="pezinho-checkbox" id="pezinho-checkbox"
+                            data-text="Pezinho......................................................................R$15">
                     </div>
                     <div id="conteudo-servico">
                         <p id="barba-tradicional">SÓ MÁQUINA</p>
-                        <input type="checkbox" name="somaquina-checkbox" id="somaquina-checkbox" data-text="Corte apenas com máquina............R$25">
+                        <input type="checkbox" name="somaquina-checkbox" id="somaquina-checkbox"
+                            data-text="Corte apenas com máquina.........R$25">
                     </div>
                     <div id="conteudo-servico">
                         <p id="barba-tradicional">DESENHO</p>
-                        <input type="checkbox" name="desenho-checkbox" id="desenho-checkbox" data-text="Corte desenhado.............................R$50">
+                        <input type="checkbox" name="desenho-checkbox" id="desenho-checkbox"
+                            data-text="Corte desenhado........................................R$50">
                     </div>
                     <div id="conteudo-servico">
                         <p id="barba-tradicional">TINTURA</p>
-                        <input type="checkbox" name="titura-checkbox" id="titura-checkbox" data-text="Tintura............................................R$30">
+                        <input type="checkbox" name="titura-checkbox" id="titura-checkbox"
+                            data-text="Tintura.......................................................................R$30">
                     </div>
                 </div>
 
-                <!-- Seção de Agenda - Selecionar data -->
+                <!-- Seção de Agenda - DATA -->
 
                 <div id="selecionar-data">
                     <div id="agenda-titulos">
@@ -155,6 +163,9 @@
 
                     <div id="data-espaco"></div>
                 </div>
+
+                <!-- Seção de Agenda - HORÁRIO -->
+
                 <div id="selecionar-horario">
                     <div id="agenda-titulos">
                         <p>HORÁRIO</p>
@@ -177,27 +188,55 @@
                     </div>
                     <div id="horario-espaco"></div>
                 </div>
+
+                <!-- Seção de Agenda - DETALHES DO AGENDAMENTO -->
+
                 <div id="detalhes-resultado">
                     <div id="agenda-titulos">
-                        <p>DETALHES DO ATENDIMENTO</p>
+                        <p>DETALHES DO AGENDAMENTO</p>
                     </div>
 
                     <div id="servico-selecionado">
-                        <p id="selecionado-titulo">Serviço:</p>
+                        <p id="selecionado-titulo">SERVIÇOS:</p>
                         <div class="resultado" id="resultado"></div>
+                        <div id="servico-espaco"></div>
                     </div>
-                    
+
                     <div id="data-selecionada">
-                        <p id="selecionado-titulo">Data do agendamento:</p>
+                        <p id="selecionado-titulo">DIA DO AGENDAMENTO:</p>
                         <div class="result" id="result"></div>
                     </div>
-                    
+                    <div id="horario-selecionado">
+                        <p id="selecionado-titulo">HORÁRIO:</p>
+                        <div id="resultado_hora"></div>
+                    </div>
+                    <div id="botao-proximo-borda">
+                        <button id="botao-proximo">PRÓXIMO</button>
+                    </div>
+
 
                 </div>
             </div>
         </section>
+        <!-- Seção de Quem Somos -->
         <section id="secao-quemSomos" class="parallax">
-            <!-- Seção de Quem Somos -->
+            <p id="titulo-quemSomos">Nossa História</p>
+
+            <div id="secao-conteudo">
+                <div id="quemSomos-imagem">
+                    <img src="/Assets/img/quemSomos.jpg" alt="" id="quemSomos-imagem-conteudo">
+                </div>
+                <div id="quemSomos-conteudo">
+                    <p id="quemSomos-historia">A Barber Shop foi fundada em 1982 por seu avô, Luiz Antônio Saar, que
+                        manteve viva a tradição da barbearia clássica. Com paixão e habilidade, ele criou um legado de
+                        cortes de cabelo e barbas impecáveis, onde os homens da comunidade se reuniam para mais do que
+                        um simples corte, mas uma experiência autêntica de masculinidade e camaradagem. Hoje,
+                        continuamos honrando a herança, mantendo viva a tradição da barbearia e proporcionando serviços
+                        excepcionais aos nossos clientes.
+                    </p>
+                </div>
+            </div>
+
         </section>
     </main>
     <!-- Rodapé -->

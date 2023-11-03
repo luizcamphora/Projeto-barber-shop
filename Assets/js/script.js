@@ -1,3 +1,4 @@
+/* Calendário */
 const calendar = document.getElementById('calendar');
 const result = document.getElementById('result');
 const prevMonthButton = document.getElementById('prevMonth');
@@ -47,6 +48,8 @@ function updateCalendar() {
     }
 }
 
+/* Calendário botões prevMonth/nextMonth */
+
 prevMonthButton.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() - 1);
     updateCalendar();
@@ -59,6 +62,7 @@ nextMonthButton.addEventListener('click', () => {
 
 updateCalendar();
 
+/* Seleção do serviço por checkbox */
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const resultado = document.getElementById('resultado');
@@ -75,5 +79,18 @@ checkboxes.forEach(checkbox => {
                 resultado.appendChild(paragrafo);
             }
         });
+    });
+});
+
+/* Seleção do horário */
+
+const horas = document.querySelectorAll("#hora");
+const resultado_hora = document.querySelector("#resultado_hora");
+
+horas.forEach(hora => {
+    hora.addEventListener("click", () => {
+        resultado_hora.textContent = hora.textContent;
+        horas.forEach(h => h.classList.remove("ativa")); // Remove a classe "ativa" de todas as horas
+        hora.classList.add("ativa"); // Adiciona a classe "ativa" à hora clicada
     });
 });
