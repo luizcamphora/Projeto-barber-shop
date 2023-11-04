@@ -94,3 +94,50 @@ horas.forEach(hora => {
         hora.classList.add("ativa"); // Adiciona a classe "ativa" à hora clicada
     });
 });
+
+/* Configuração da ativação do link */
+
+const listaLinks = document.querySelectorAll(".lista-link");
+const sections = document.querySelectorAll("section");
+
+listaLinks.forEach((link, index) => {
+    link.addEventListener("click", () => {
+        sections[index].scrollIntoView({ behavior: "smooth" });
+    });
+});
+
+window.addEventListener("scroll", () => {
+    let fromTop = window.scrollY;
+
+    listaLinks.forEach((link, index) => {
+        const section = sections[index];
+        if (
+            section.offsetTop <= fromTop + 10 &&
+            section.offsetTop + section.offsetHeight > fromTop + 10
+        ) {
+            listaLinks.forEach((link) => link.classList.remove("active-link"));
+            listaLinks[index].classList.add("active-link");
+        } else {
+            listaLinks[index].classList.remove("active-link");
+        }
+    });
+});
+
+ // JavaScript para abrir e fechar a janela modal
+ const openModalButton = document.getElementById("open-modal");
+ const modal = document.getElementById("myModal");
+ const closeModal = document.getElementById("close-modal");
+
+ openModalButton.addEventListener("click", () => {
+     modal.style.display = "block";
+ });
+
+ closeModal.addEventListener("click", () => {
+     modal.style.display = "none";
+ });
+
+ window.addEventListener("click", (event) => {
+     if (event.target === modal) {
+         modal.style.display = "none";
+     }
+ });

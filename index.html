@@ -21,11 +21,11 @@
             <p id="logo-since">Desde de 1982</p>
         </div>
         <div id="menu">
-            <ul id="lista">
-                <li id="lista-menu"><a href="#secao-home" id="lista-link">HOME</a></li>
-                <li id="lista-menu"><a href="#secao-servico" id="lista-link">SERVIÇOS</a></li>
-                <li id="lista-menu"><a href="#secao-agenda" id="lista-link">AGENDA</a></li>
-                <li id="lista-menu"><a href="#secao-quemSomos" id="lista-link">QUEM SOMOS</a></li>
+            <ul class="lista">
+                <li class="lista-menu"><a href="#secao-home" class="lista-link">HOME</a></li>
+                <li class="lista-menu"><a href="#secao-servico" class="lista-link">SERVIÇOS</a></li>
+                <li class="lista-menu"><a href="#secao-agenda" class="lista-link">AGENDA</a></li>
+                <li class="lista-menu"><a href="#secao-quemSomos" class="lista-link">QUEM SOMOS</a></li>
             </ul>
         </div>
         <div id="login">
@@ -45,17 +45,18 @@
                 <p id="texto-banner-small">Fazemos sua barba da maneira clássica:</p>
                 <p id="texto-banner-bold">com navalha e toalha quente</p>
                 <div id="botao-banner">
-                    <button id="botao-banner-servico">SERVIÇOS</button>
+                    <a href="#secao-servico"><button id="botao-banner-servico">SERVIÇOS</button></a>
+
                 </div>
             </div>
 
             <!-- Links Redes Sociais -->
 
             <div id="icone-redes">
-                <i class="fa-brands fa-facebook"></i>
-                <i class="fa-brands fa-instagram"></i>
-                <i class="fa-brands fa-youtube"></i>
-                <i class="fa-brands fa-twitter"></i>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                <a href=""><i class="fa-brands fa-twitter"></i></a>
             </div>
         </section>
 
@@ -67,7 +68,7 @@
                 <div id="servico-tabela">
                     <img src="/Assets/img/tebela-servico.jpg" alt="" id="servico-tabela-img">
                     <div id="botao-tabela">
-                        <button id="botao-tabela-agendar">AGENDAR</button>
+                        <a href="#secao-agenda"><button id="botao-tabela-agendar">AGENDAR</button></a>
                     </div>
                 </div>
 
@@ -211,9 +212,67 @@
                         <div id="resultado_hora"></div>
                     </div>
                     <div id="botao-proximo-borda">
-                        <button id="botao-proximo">PRÓXIMO</button>
+                        <button class="modal-button" id="open-modal">PRÓXIMO</button>
                     </div>
 
+                    <!-- Conteúdo Janela Modal -->
+
+                    <div class="modal" id="myModal">
+                        <div class="modal-content">
+                            <span id="close-modal" style="cursor: pointer;">Fechar X</span>
+                            <div id="conteudo-modal">
+                                <div id="formulario">
+                                    <div id="formulario-titulo-oauth">
+                                        <p id="titulo-formulario">Preencha seus dados</p>
+                                    </div>
+                                    <div id="nome-email">
+                                        <div id="fomulario-nome">
+                                            <label for="input-nome" id="label-nome">Nome*</label>
+                                            <input type="text" name="input-nome" id="input-nome">
+                                        </div>
+                                        <div id="formulario-email">
+                                            <label for="input-email" id="label-email">E-mail*</label>
+                                            <input type="text" name="input-email" id="input-email">
+                                        </div>
+                                    </div>
+                                    <div id="formulario-endereco">
+                                        <label for="input-endereco" id="label-endereco">Endereço</label>
+                                        <input type="text" name="input-endereco" id="input-endereco" placeholder="opcional*">
+                                    </div>
+                                    <div id="cidade-bairro-zap">
+                                        <div id="formulario-cidade">
+                                            <label for="input-cidade" id="label-cidade">Cidade</label>
+                                            <input type="text" name="input-cidade" id="input-cidade" placeholder="opcional*">
+                                        </div>
+                                        <div id="formulario-bairro">
+                                            <label for="input-bairro" id="label-bairro">Bairro</label>
+                                            <input type="text" name="input-bairro" id="input-bairro" placeholder="opcional*">
+                                        </div>
+                                        <div id="formulario-zap">
+                                            <label for="input-zap" id="label-zap">Whatsapp*</label>
+                                            <input type="text" name="input-zap" id="input-zap">
+                                        </div>
+                                    </div>
+                                    <div id="formulario-mensagem">
+                                        <label for="input-mensagem" id="label-mensagem">Adicione sua mensagem</label>
+                                        <input type="text" name="input-mensagem" id="input-mensagem"  >
+                                    </div>
+
+                                </div>
+                                <div id="informacao-agendamento">
+                                    <div id="informacao">
+                                        <p id="informacao-texto">Informações do agendamento</p>
+                                    </div>
+                                    <div id="servico-espaco"></div>
+                                    <div class="result" id="result"></div>
+                                    <div id="resultado_hora"></div>
+                                    <div id="botao-formulario">
+                                        <button id="botao-agendar-agora">Agendar agora</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -224,7 +283,7 @@
 
             <div id="secao-conteudo">
                 <div id="quemSomos-imagem">
-                    <img src="/Assets/img/quemSomos.jpg" alt="" id="quemSomos-imagem-conteudo">
+                    <img src="/Assets/img/senhor2.jpg" alt="" id="quemSomos-imagem-conteudo">
                 </div>
                 <div id="quemSomos-conteudo">
                     <p id="quemSomos-historia">A Barber Shop foi fundada em 1982 por seu avô, Luiz Antônio Saar, que
@@ -240,7 +299,37 @@
         </section>
     </main>
     <!-- Rodapé -->
-    <footer id="rodape"></footer>
+    <footer id="rodape">
+        <div id="rodape-conteudos">
+            <p id="rodape-conteudo-titulo">LOCALIZAÇÃO</p>
+            <a id="link-imagem-maps"
+                href="https://www.google.com/maps/place/Rua+Anizio+Ortiz+Monteiro,+50+-+Centro,+Taubat%C3%A9+-+SP,+12010-000/@-23.024226,-45.560635,17z/data=!3m1!4b1!4m6!3m5!1s0x94ccf901a83c439d:0x95a87c8c07e51a0e!8m2!3d-23.024226!4d-45.560635!16s%2Fg%2F11c4q3g7tm?entry=ttu">Clique
+                aqui <i class="fa-solid fa-location-dot"></i></a>
+        </div>
+        <div id="rodape-conteudos-barra">
+            <p id="rodape-conteudo-titulo">ENDEREÇO</p>
+            <p id="rodape-texto">Rua Anízio Ortiz Monteiro,590</p>
+            <p id="rodape-texto"> Centro-Taubaté-SP 12010-0000</p>
+            <p id="rodape-texto">Tel. (12) 3633-3939</p>
+        </div>
+        <div id="rodape-conteudos-barra">
+            <p id="rodape-conteudo-titulo">HORÁRIO DE FUNCIONAMENTO</p>
+            <p id="rodape-texto">Seg. à Sex. - 10:00 às 22:00</p>
+            <p id="rodape-texto"> Sábados - 08:00 às 22:00</p>
+            <p id="rodape-texto">Fechado aos Domingos e Feriados</p>
+        </div>
+        <div id="rodape-conteudos-barra">
+            <p id="rodape-conteudo-titulo">REDES SOCIAIS</p>
+            <div id="icones-redes">
+                <i class="fa-brands fa-facebook" id="rodape-icone"></i>
+                <i class="fa-brands fa-instagram" id="rodape-icone"></i>
+                <i class="fa-brands fa-youtube" id="rodape-icone"></i>
+                <i class="fa-brands fa-twitter" id="rodape-icone"></i>
+            </div>
+            <p id="rodape-texto-direitos-reservados">© 2023 por Barber Shop. Criado por LP Desenvolvimentos</p>
+
+        </div>
+    </footer>
 
     <!-- Inclusão do Kit de Font Awesome -->
     <script src="https://kit.fontawesome.com/95932c07d1.js" crossorigin="anonymous"></script>
