@@ -55,6 +55,10 @@ html {
   color: #fff;
   font-family: "Queen";
 }
+#navegacao #menu-toggle {
+  position: fixed;
+  right: -20vw;
+}
 #navegacao #menu {
   /* Estilos para o menu da barra de navegação */
 }
@@ -184,9 +188,12 @@ html {
   align-items: center;
   justify-content: center;
 }
-#secao-servico #servico-tabela #servico-tabela-img {
+#secao-servico #servico-tabela #tabela-horizontal #servico-tabela-img {
   width: 60%;
   margin-top: 42px;
+}
+#secao-servico #servico-tabela #tabela-vertical {
+  display: none;
 }
 #secao-servico #servico-tabela #botao-tabela {
   position: absolute;
@@ -221,6 +228,8 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Estilos para seção "HORÁRIO" */
+  /* Estilos para a seção "DETALHES DO AGENDAMENTO */
 }
 #secao-agenda #agenda {
   width: 90vw;
@@ -342,9 +351,7 @@ html {
 #secao-agenda #data-espaco {
   height: 160px;
 }
-
-/* Estilos para seção "HORÁRIO" */
-#selecionar-horario {
+#secao-agenda #selecionar-horario {
   width: 21.5vw;
   height: 76vh;
   display: flex;
@@ -352,14 +359,14 @@ html {
   align-items: center;
   justify-content: space-between;
 }
-#selecionar-horario #horarios {
+#secao-agenda #selecionar-horario #horarios {
   width: 100%;
   height: 400px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#selecionar-horario #horarios #primeira-coluna-horario {
+#secao-agenda #selecionar-horario #horarios #primeira-coluna-horario {
   width: 100%;
   height: 400px;
   display: flex;
@@ -367,7 +374,7 @@ html {
   align-items: center;
   justify-content: space-between;
 }
-#selecionar-horario #horarios #primeira-coluna-horario #hora {
+#secao-agenda #selecionar-horario #horarios #primeira-coluna-horario #hora {
   width: 100px;
   height: 60px;
   text-align: center;
@@ -377,19 +384,19 @@ html {
   color: #fff;
   border: #fff 1px solid;
 }
-#selecionar-horario #horarios #primeira-coluna-horario #hora:hover {
+#secao-agenda #selecionar-horario #horarios #primeira-coluna-horario #hora:hover {
   border: #EFB43A 1px solid;
   background-color: rgba(255, 224, 138, 0.1);
   transition: 3ms;
   cursor: pointer;
 }
-#selecionar-horario #horarios #primeira-coluna-horario #hora.ativa {
+#secao-agenda #selecionar-horario #horarios #primeira-coluna-horario #hora.ativa {
   background-color: #0074d9;
   /* Cor de fundo ativa */
   border: 2px solid #0056b3;
   /* Borda ativa */
 }
-#selecionar-horario #horarios #segunda-coluna-horario {
+#secao-agenda #selecionar-horario #horarios #segunda-coluna-horario {
   width: 100%;
   height: 400px;
   display: flex;
@@ -397,7 +404,7 @@ html {
   align-items: center;
   justify-content: space-between;
 }
-#selecionar-horario #horarios #hora {
+#secao-agenda #selecionar-horario #horarios #hora {
   width: 100px;
   height: 60px;
   text-align: center;
@@ -407,25 +414,23 @@ html {
   color: #fff;
   border: #fff 1px solid;
 }
-#selecionar-horario #horarios #hora:hover {
+#secao-agenda #selecionar-horario #horarios #hora:hover {
   border: #EFB43A 1px solid;
   background-color: rgba(255, 224, 138, 0.1);
   transition: 3ms;
   cursor: pointer;
 }
-#selecionar-horario #horarios #hora.ativa {
+#secao-agenda #selecionar-horario #horarios #hora.ativa {
   background-color: #0074d9;
   /* Cor de fundo ativa */
   border: 2px solid #0056b3;
   /* Borda ativa */
 }
-#selecionar-horario #horario-espaco {
+#secao-agenda #selecionar-horario #horario-espaco {
   width: 100%;
   height: 40px;
 }
-
-/* Estilos para a seção "DETALHES DO AGENDAMENTO */
-#detalhes-resultado {
+#secao-agenda #detalhes-resultado {
   width: 21.5vw;
   height: 76vh;
   display: flex;
@@ -434,7 +439,7 @@ html {
   margin-right: 1vw;
   /* Estilo para a janela modal */
 }
-#detalhes-resultado #servico-selecionado {
+#secao-agenda #detalhes-resultado #servico-selecionado {
   width: 100%;
   height: 160px;
   display: flex;
@@ -442,25 +447,25 @@ html {
   justify-content: space-between;
   align-items: center;
 }
-#detalhes-resultado #servico-selecionado #selecionado-titulo {
+#secao-agenda #detalhes-resultado #servico-selecionado #selecionado-titulo {
   font-family: "Queen";
   color: #EFB43A;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 16px;
 }
-#detalhes-resultado #servico-selecionado #resultado {
+#secao-agenda #detalhes-resultado #servico-selecionado #resultado {
   color: #fff;
   font-family: "Queen";
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
-#detalhes-resultado #servico-selecionado #servico-espaco {
+#secao-agenda #detalhes-resultado #servico-selecionado #servico-espaco {
   width: 100%;
   height: 140px;
 }
-#detalhes-resultado #data-selecionada {
+#secao-agenda #detalhes-resultado #data-selecionada {
   width: 100%;
   height: 80px;
   display: flex;
@@ -468,14 +473,14 @@ html {
   justify-content: center;
   align-items: center;
 }
-#detalhes-resultado #data-selecionada #selecionado-titulo {
+#secao-agenda #detalhes-resultado #data-selecionada #selecionado-titulo {
   font-family: "Queen";
   color: #EFB43A;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 16px;
 }
-#detalhes-resultado #data-selecionada #result {
+#secao-agenda #detalhes-resultado #data-selecionada #result {
   color: #fff;
   font-family: "Queen";
   display: flex;
@@ -483,7 +488,7 @@ html {
   justify-content: center;
   margin: 0 auto;
 }
-#detalhes-resultado #horario-selecionado {
+#secao-agenda #detalhes-resultado #horario-selecionado {
   width: 100%;
   height: 80px;
   display: flex;
@@ -491,14 +496,14 @@ html {
   justify-content: center;
   align-items: center;
 }
-#detalhes-resultado #horario-selecionado #selecionado-titulo {
+#secao-agenda #detalhes-resultado #horario-selecionado #selecionado-titulo {
   font-family: "Queen";
   color: #EFB43A;
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 16px;
 }
-#detalhes-resultado #horario-selecionado #resultado_hora {
+#secao-agenda #detalhes-resultado #horario-selecionado #resultado_hora {
   color: #fff;
   font-family: "Queen";
   display: flex;
@@ -506,7 +511,7 @@ html {
   justify-content: center;
   margin: 0 auto;
 }
-#detalhes-resultado #botao-proximo-borda {
+#secao-agenda #detalhes-resultado #botao-proximo-borda {
   width: 210px;
   height: 60px;
   background-color: #EFB43A;
@@ -514,7 +519,7 @@ html {
   align-items: center;
   justify-content: center;
 }
-#detalhes-resultado #botao-proximo-borda .modal-button {
+#secao-agenda #detalhes-resultado #botao-proximo-borda .modal-button {
   width: 200px;
   height: 50px;
   background-color: #EFB43A;
@@ -523,12 +528,12 @@ html {
   font-size: 20px;
   font-weight: bold;
 }
-#detalhes-resultado #botao-proximo-borda .modal-button:hover {
+#secao-agenda #detalhes-resultado #botao-proximo-borda .modal-button:hover {
   cursor: pointer;
   color: #fff;
   background-color: #f3b02b;
 }
-#detalhes-resultado .modal {
+#secao-agenda #detalhes-resultado .modal {
   display: none;
   position: fixed;
   top: 5%;
@@ -540,7 +545,7 @@ html {
   z-index: 2;
   display: flex;
 }
-#detalhes-resultado .modal .modal-content {
+#secao-agenda #detalhes-resultado .modal .modal-content {
   background-color: #191A1D;
   width: 90%;
   height: 90%;
@@ -551,7 +556,7 @@ html {
   align-items: center;
   justify-content: space-between;
 }
-#detalhes-resultado .modal .modal-content #close-modal {
+#secao-agenda #detalhes-resultado .modal .modal-content #close-modal {
   color: #fff;
   font-family: "Queen";
   width: 100%;
@@ -559,18 +564,18 @@ html {
   margin: 0 auto;
   text-align: center;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal {
   width: 100%;
   height: 90%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario {
   width: 70%;
   height: 100%;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #formulario-titulo-oauth {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #formulario-titulo-oauth {
   width: 100%;
   height: 10%;
   display: flex;
@@ -578,55 +583,55 @@ html {
   align-items: center;
   border-bottom: #53533f 1px solid;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #formulario-titulo-oauth #titulo-formulario {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #formulario-titulo-oauth #titulo-formulario {
   font-family: "Queen";
   color: #EFB43A;
   font-size: 24px;
   margin-left: 40px;
   font-weight: bold;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
   height: 15%;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email #fomulario-nome {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email #fomulario-nome {
   display: flex;
   flex-direction: column;
   width: 40%;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email #fomulario-nome #input-nome {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email #fomulario-nome #input-nome {
   background-color: #191A1D;
   border: #EFB43A 1px solid;
   height: 24px;
   color: #EFB43A;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email #fomulario-nome #label-nome {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email #fomulario-nome #label-nome {
   color: #fff;
   font-family: "Queen";
   font-size: 20px;
   margin-bottom: 8px;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email #formulario-email {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email #formulario-email {
   display: flex;
   flex-direction: column;
   width: 40%;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email #formulario-email #input-email {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email #formulario-email #input-email {
   background-color: #191A1D;
   border: #EFB43A 1px solid;
   height: 24px;
   color: #EFB43A;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email #formulario-email #label-email {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #nome-email #formulario-email #label-email {
   color: #fff;
   font-family: "Queen";
   font-size: 20px;
   margin-bottom: 8px;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #formulario-endereco {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #formulario-endereco {
   display: flex;
   flex-direction: column;
   width: 90%;
@@ -634,19 +639,19 @@ html {
   height: 15%;
   justify-content: center;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #formulario-endereco #input-endereco {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #formulario-endereco #input-endereco {
   background-color: #191A1D;
   border: #EFB43A 1px solid;
   height: 24px;
   color: #EFB43A;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #formulario-endereco #label-endereco {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #formulario-endereco #label-endereco {
   color: #fff;
   font-family: "Queen";
   font-size: 20px;
   margin-bottom: 8px;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -654,58 +659,58 @@ html {
   height: 15%;
   margin-left: 40px;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-cidade {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-cidade {
   display: flex;
   flex-direction: column;
   width: 25%;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-cidade #input-cidade {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-cidade #input-cidade {
   background-color: #191A1D;
   border: #EFB43A 1px solid;
   height: 24px;
   color: #EFB43A;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-cidade #label-cidade {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-cidade #label-cidade {
   color: #fff;
   font-family: "Queen";
   font-size: 20px;
   margin-bottom: 8px;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-bairro {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-bairro {
   display: flex;
   flex-direction: column;
   width: 25%;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-bairro #input-bairro {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-bairro #input-bairro {
   background-color: #191A1D;
   border: #EFB43A 1px solid;
   height: 24px;
   color: #EFB43A;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-bairro #label-bairro {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-bairro #label-bairro {
   color: #fff;
   font-family: "Queen";
   font-size: 20px;
   margin-bottom: 8px;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-zap {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-zap {
   display: flex;
   flex-direction: column;
   width: 25%;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-zap #input-zap {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-zap #input-zap {
   background-color: #191A1D;
   border: #EFB43A 1px solid;
   height: 24px;
   color: #EFB43A;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-zap #label-zap {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #formulario #cidade-bairro-zap #formulario-zap #label-zap {
   color: #fff;
   font-family: "Queen";
   font-size: 20px;
   margin-bottom: 8px;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento {
   width: 30%;
   height: 100%;
   display: flex;
@@ -713,22 +718,22 @@ html {
   align-items: center;
   justify-content: space-between;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #informacao {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #informacao {
   width: 100%;
   height: 10%;
   border-bottom: #53533f 1px solid;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #informacao #informacao-texto {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #informacao #informacao-texto {
   font-family: "Queen";
   color: #EFB43A;
   font-size: 24px;
   font-weight: bold;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #servico-espaco {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #servico-espaco {
   width: 100%;
   height: 100px;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #result {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #result {
   color: #fff;
   font-family: "Queen";
   display: flex;
@@ -736,7 +741,7 @@ html {
   justify-content: center;
   margin: 0 auto;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #resultado_hora {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #resultado_hora {
   color: #fff;
   font-family: "Queen";
   display: flex;
@@ -744,7 +749,7 @@ html {
   justify-content: center;
   margin: 0 auto;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #botao-formulario {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #botao-formulario {
   width: 220px;
   height: 60px;
   background-color: #EFB43A;
@@ -753,7 +758,7 @@ html {
   justify-content: center;
   margin-bottom: 80px;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #botao-formulario #botao-agendar-agora {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #botao-formulario #botao-agendar-agora {
   width: 210px;
   height: 50px;
   background-color: #EFB43A;
@@ -761,7 +766,7 @@ html {
   font-family: "Queen";
   font-size: 20px;
 }
-#detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #botao-formulario #botao-agendar-agora:hover {
+#secao-agenda #detalhes-resultado .modal .modal-content #conteudo-modal #informacao-agendamento #botao-formulario #botao-agendar-agora:hover {
   color: #fff;
   cursor: pointer;
   background-color: #f3b02b;

@@ -1,0 +1,52 @@
+@media screen and (max-width: 768px) {
+  #navegacao {
+    /* MENU HAMBURGUER */
+  }
+  #navegacao #menu {
+    display: none;
+  }
+  #navegacao .mobile-hidden {
+    display: none;
+  }
+  #navegacao #login {
+    display: none;
+  }
+  #navegacao #menu-toggle {
+    right: 10vw;
+    font-size: 48px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    color: #fff;
+  }
+  #secao-home #banner #texto-banner-small {
+    font-size: 20px;
+  }
+  #secao-home #banner #texto-banner-bold {
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 15vh;
+  }
+  #secao-home #icone-redes {
+    left: 25vw;
+    top: 25vh;
+  }
+  #secao-servico #servico #servico-tabela #tabela-horizontal {
+    display: none;
+  }
+  #secao-servico #servico #servico-tabela #tabela-vertical {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90vw;
+    height: 80vh;
+  }
+  #secao-servico #servico #servico-tabela #tabela-vertical #tabela-vertical-img {
+    width: 100%;
+  }
+  #secao-agenda #agenda {
+    display: none;
+  }
+  #rodape {
+    display: none;
+  }
+}/*# sourceMappingURL=responsive.css.map */

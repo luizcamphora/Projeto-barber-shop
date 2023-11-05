@@ -1,4 +1,5 @@
-/* Calendário */
+/* CALENDÁRIO */
+
 const calendar = document.getElementById('calendar');
 const result = document.getElementById('result');
 const prevMonthButton = document.getElementById('prevMonth');
@@ -48,7 +49,7 @@ function updateCalendar() {
     }
 }
 
-/* Calendário botões prevMonth/nextMonth */
+/* BOTÃO PREV/NEXT CALENDÁRIO */
 
 prevMonthButton.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() - 1);
@@ -62,7 +63,7 @@ nextMonthButton.addEventListener('click', () => {
 
 updateCalendar();
 
-/* Seleção do serviço por checkbox */
+/* CHECKBOK */
 
 const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 const resultado = document.getElementById('resultado');
@@ -82,7 +83,7 @@ checkboxes.forEach(checkbox => {
     });
 });
 
-/* Seleção do horário */
+/* SELEÇÃO DO HORÁRIO */
 
 const horas = document.querySelectorAll("#hora");
 const resultado_hora = document.querySelector("#resultado_hora");
@@ -95,7 +96,7 @@ horas.forEach(hora => {
     });
 });
 
-/* Configuração da ativação do link */
+/* ATIVAÇÃO DO LINK */
 
 const listaLinks = document.querySelectorAll(".lista-link");
 const sections = document.querySelectorAll("section");
@@ -123,21 +124,24 @@ window.addEventListener("scroll", () => {
     });
 });
 
- // JavaScript para abrir e fechar a janela modal
- const openModalButton = document.getElementById("open-modal");
- const modal = document.getElementById("myModal");
- const closeModal = document.getElementById("close-modal");
+/* JANELA MODAL */
 
- openModalButton.addEventListener("click", () => {
-     modal.style.display = "block";
- });
+const openModalButton = document.getElementById("open-modal");
+const modal = document.getElementById("myModal");
+const closeModal = document.getElementById("close-modal");
 
- closeModal.addEventListener("click", () => {
-     modal.style.display = "none";
- });
+openModalButton.addEventListener("click", () => {
+    modal.style.display = "block";
+});
 
- window.addEventListener("click", (event) => {
-     if (event.target === modal) {
-         modal.style.display = "none";
-     }
- });
+closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+});
+
+window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+ /* MENU RESPONSIVO */
