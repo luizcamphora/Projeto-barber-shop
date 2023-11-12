@@ -4,323 +4,99 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barber-shop</title>
-    <!-- Inclusão dos arquivos de estilo -->
+    <title>Barber Shop</title>
 
+    <!-- ACESSO AOS LINK'S DE ESTILIZAÇÃO -->
     <link rel="stylesheet" href="/Assets/css/reset.css">
-    <link rel="stylesheet" href="/Assets/css/style.css">
-    <link rel="stylesheet" href="/Assets/css/responsive.css">
+    <link rel="stylesheet" href="/Assets/css/style-responsive.css">
 
 </head>
 
 <body>
-    <!-- Barra de Navegação -->
-    <nav id="navegacao">
+    <!-- NAVBAR -->
+    <nav id="navegacao-mobile">
+        <!-- LOGOTIPO -->
         <div id="logo">
-            <!-- Logo da Barber Shop -->
             <p id="logo-texto">BARBER SHOP</p>
             <p id="logo-since">Desde de 1982</p>
         </div>
-        <button id="menu-toggle"><i class="fa-solid fa-bars"></i></button>
-        <div id="menu">
-            <ul class="lista">
-                <li class="lista-menu"><a href="#secao-home" class="lista-link">HOME</a></li>
-                <li class="lista-menu"><a href="#secao-servico" class="lista-link">SERVIÇOS</a></li>
-                <li class="lista-menu"><a href="#secao-agenda" class="lista-link">AGENDA</a></li>
-                <li class="lista-menu"><a href="#secao-quemSomos" class="lista-link">QUEM SOMOS</a></li>
+
+        <!-- BOTÃO TOGGLE -->
+        <div class="menu-toggle" id="mobile-menu">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+        <!-- MENU HIDDEN MOBILE -->
+        <div class="menu-mobile">
+            <ul id="lista-mobile">
+                <li id="lista-mobile__menu">
+                    <i class="fa-solid fa-house icones-menu"></i>
+                    <a href="#secao-home-mobile" id="lista-mobile__link">HOME</a>
+                </li>
+                <li id="lista-mobile__menu">
+                    <i class="fa-solid fa-wrench icones-menu"></i>
+                    <a href="#secao-servicos-mobile" id="lista-mobile__link">SERVIÇOS</a>
+                </li>
+                <li id="lista-mobile__menu">
+                    <i class="fa-regular fa-calendar-check icones-menu"></i>
+                    <a href="#secao-agenda-mobile" id="lista-mobile__link">AGENDA</a>
+                </li>
+                <li id="lista-mobile__menu">
+                    <i class="fa-solid fa-people-group icones-menu"></i>
+                    <a href="#secao-quemSomos-mobile" id="lista-mobile__link">QUEM SOMOS</a>
+                </li>
+                <li id="lista-mobile__menu">
+                    <i class="fa-solid fa-right-to-bracket icones-menu"></i>
+                    <a href="#" id="lista-mobile__link">LOGIN</a>
+                </li>
             </ul>
         </div>
-        <div id="login">
-            <!-- Ícone de Login -->
-            <i class="fa-solid fa-right-to-bracket" id="icon-login"></i>
-        </div>
     </nav>
-    <!-- Conteúdo Principal -->
-    <main class="principal">
 
-        <!-- Seção de Início (Home) -->
-        <section id="secao-home" class="parallax">
 
-            <!-- Banner -->
-
+    <!-- PRINCIPAL -->
+    <main id="principal">
+        <!-- SEÇÃO HOME -->
+        <section id="secao-home-mobile" class="parallax">
             <div id="banner">
+                <!-- REDES SOCIAIS -->
+                <div id="icone-redes">
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
+                    <a href=""><i class="fa-brands fa-twitter"></i></a>
+                </div>
+                <!-- TEXTO BANNER -->
                 <p id="texto-banner-small">Fazemos sua barba da maneira clássica:</p>
                 <p id="texto-banner-bold">com navalha e toalha quente</p>
+                <!-- BOTÃO BANNER 'SERVIÇOS' -->
                 <div id="botao-banner">
-                    <a href="#secao-servico"><button id="botao-banner-servico">SERVIÇOS</button></a>
+                    <a href="#secao-servicos-mobile"><button id="botao-banner-servico">SERVIÇOS</button></a>
                 </div>
-            </div>
-
-            <!-- Links Redes Sociais -->
-
-            <div id="icone-redes">
-                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
-            </div>
-        </section>
-
-        <!-- Seção de Serviços -->
-
-        <section id="secao-servico" class="parallax">
-
-            <div id="servico">
-                <div id="servico-tabela">
-                    <div id="tabela-horizontal">
-                        <img src="/Assets/img/tebela-servico.jpg" alt="" id="servico-tabela-img tabela-vertical">
-                    </div>
-                    <div id="tabela-vertical">
-                        <img src="/Assets/img/tabela-vertical.JPG" alt="" id="tabela-vertical-img">
-                    </div>
-                
-                    <div id="botao-tabela">
-                        <a href="#secao-agenda"><button id="botao-tabela-agendar">AGENDAR</button></a>
-                    </div>
-                </div>
-
             </div>
 
         </section>
-        <section id="secao-agenda" class="parallax">
-            <!-- Seção de Agenda -->
-            <div id="agenda">
-                <!-- Seção de Agenda - Tipo de Serviço -->
-                <div id="selecionar-servico">
-
-                    <div id="agenda-titulos">
-                        <p>TIPO DE SERVIÇO</p>
-                    </div>
-
-                    <!-- Barba -->
-
-                    <p id="servico-titulo">BARBA</p>
-                    <div id="conteudo-servico">
-                        <p id="barba-tradicional">TRADICIONAL</p>
-                        <input type="checkbox" name="tradicional-checkbox" id="tradicional-checkbox"
-                            data-text="Barba tradicional.........................................R$45">
-                    </div>
-                    <div id="conteudo-servico">
-                        <p id="barba-desenhada">DESENHADA</p>
-                        <input type="checkbox" name="desenhada-checkbox" id="desenhada-checkbox"
-                            data-text="Barba desenhada.......................................R$40">
-                    </div>
-                    <div id="conteudo-servico">
-                        <p id="barba-tradicional">HIDRATAÇÃO</p>
-                        <input type="checkbox" name="hidratacao-checkbox" id="hidratacao-checkbox"
-                            data-text="Barba hidratação........................................R$20">
-                    </div>
-
-                    <!-- Cabelo -->
-
-                    <p id="servico-titulo">CABELO</p>
-                    <div id="conteudo-servico">
-                        <p id="barba-tradicional">CORTE</p>
-                        <input type="checkbox" name="corte-checkbox" id="corte-checkbox"
-                            data-text="Corte de cabelo............................................R$45">
-                    </div>
-                    <div id="conteudo-servico">
-                        <p id="barba-tradicional">PEZINHO</p>
-                        <input type="checkbox" name="pezinho-checkbox" id="pezinho-checkbox"
-                            data-text="Pezinho......................................................................R$15">
-                    </div>
-                    <div id="conteudo-servico">
-                        <p id="barba-tradicional">SÓ MÁQUINA</p>
-                        <input type="checkbox" name="somaquina-checkbox" id="somaquina-checkbox"
-                            data-text="Corte apenas com máquina.........R$25">
-                    </div>
-                    <div id="conteudo-servico">
-                        <p id="barba-tradicional">DESENHO</p>
-                        <input type="checkbox" name="desenho-checkbox" id="desenho-checkbox"
-                            data-text="Corte desenhado........................................R$50">
-                    </div>
-                    <div id="conteudo-servico">
-                        <p id="barba-tradicional">TINTURA</p>
-                        <input type="checkbox" name="titura-checkbox" id="titura-checkbox"
-                            data-text="Tintura.......................................................................R$30">
-                    </div>
-                </div>
-
-                <!-- Seção de Agenda - DATA -->
-
-                <div id="selecionar-data">
-                    <div id="agenda-titulos">
-                        <p>DATA</p>
-                    </div>
-
-                    <!-- Calendário -->
-
-                    <div id="calendario">
-                        <div class="controls">
-                            <button id="prevMonth"><i class="fa-solid fa-backward"></i></button>
-                            <span id="currentMonthYear"></span>
-                            <button id="nextMonth"><i class="fa-solid fa-forward"></i></button>
-                        </div>
-                        <div id="semana">
-                            <div id="semana-dia">Dom</div>
-                            <div id="semana-dia">Seg</div>
-                            <div id="semana-dia">Ter</div>
-                            <div id="semana-dia">Qua</div>
-                            <div id="semana-dia">Qui</div>
-                            <div id="semana-dia">Sex</div>
-                            <div id="semana-dia">Sab</div>
-                        </div>
-                        <div class="calendar" id="calendar"></div>
-
-                    </div>
-
-                    <div id="data-espaco"></div>
-                </div>
-
-                <!-- Seção de Agenda - HORÁRIO -->
-
-                <div id="selecionar-horario">
-                    <div id="agenda-titulos">
-                        <p>HORÁRIO</p>
-                    </div>
-                    <div id="horarios">
-                        <div id="primeira-coluna-horario">
-                            <div id="hora">10:00</div>
-                            <div id="hora">11:00</div>
-                            <div id="hora">14:00</div>
-                            <div id="hora">15:00</div>
-                            <div id="hora">16:00</div>
-                        </div>
-                        <div id="segunda-coluna-horario">
-                            <div id="hora">17:00</div>
-                            <div id="hora">18:00</div>
-                            <div id="hora">19:00</div>
-                            <div id="hora">20:00</div>
-                            <div id="hora">21:00</div>
-                        </div>
-                    </div>
-                    <div id="horario-espaco"></div>
-                </div>
-
-                <!-- Seção de Agenda - DETALHES DO AGENDAMENTO -->
-
-                <div id="detalhes-resultado">
-                    <div id="agenda-titulos">
-                        <p>DETALHES DO AGENDAMENTO</p>
-                    </div>
-
-                    <div id="servico-selecionado">
-                        <p id="selecionado-titulo">SERVIÇOS:</p>
-                        <div class="resultado" id="resultado"></div>
-                        <div id="servico-espaco"></div>
-                    </div>
-
-                    <div id="data-selecionada">
-                        <p id="selecionado-titulo">DIA DO AGENDAMENTO:</p>
-                        <div class="result" id="result"></div>
-                    </div>
-                    <div id="horario-selecionado">
-                        <p id="selecionado-titulo">HORÁRIO:</p>
-                        <div id="resultado_hora"></div>
-                    </div>
-                    <div id="botao-proximo-borda">
-                        <button class="modal-button" id="open-modal">PRÓXIMO</button>
-                    </div>
-
-                    <!-- Conteúdo Janela Modal -->
-
-                    <div class="modal" id="myModal">
-                        <div class="modal-content">
-                            <span id="close-modal" style="cursor: pointer;">Fechar X</span>
-                            <div id="conteudo-modal">
-                                <div id="formulario">
-                                    <div id="formulario-titulo-oauth">
-                                        <p id="titulo-formulario">Preencha seus dados</p>
-                                    </div>
-                                    <div id="nome-email">
-                                        <div id="fomulario-nome">
-                                            <label for="input-nome" id="label-nome">Nome*</label>
-                                            <input type="text" name="input-nome" id="input-nome">
-                                        </div>
-                                        <div id="formulario-email">
-                                            <label for="input-email" id="label-email">E-mail*</label>
-                                            <input type="text" name="input-email" id="input-email">
-                                        </div>
-                                    </div>
-                                    <div id="formulario-endereco">
-                                        <label for="input-endereco" id="label-endereco">Endereço</label>
-                                        <input type="text" name="input-endereco" id="input-endereco" placeholder="opcional*">
-                                    </div>
-                                    <div id="cidade-bairro-zap">
-                                        <div id="formulario-cidade">
-                                            <label for="input-cidade" id="label-cidade">Cidade</label>
-                                            <input type="text" name="input-cidade" id="input-cidade" placeholder="opcional*">
-                                        </div>
-                                        <div id="formulario-bairro">
-                                            <label for="input-bairro" id="label-bairro">Bairro</label>
-                                            <input type="text" name="input-bairro" id="input-bairro" placeholder="opcional*">
-                                        </div>
-                                        <div id="formulario-zap">
-                                            <label for="input-zap" id="label-zap">Whatsapp*</label>
-                                            <input type="text" name="input-zap" id="input-zap">
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div id="informacao-agendamento">
-                                    <div id="informacao">
-                                        <p id="informacao-texto">Informações do agendamento</p>
-                                    </div>
-                                    <div id="servico-espaco"></div>
-                                    <div class="result" id="result"></div>
-                                    <div id="resultado_hora"></div>
-                                    <div id="botao-formulario">
-                                        <button id="botao-agendar-agora">Agendar agora</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+        <!-- SEÇÃO SERVIÇOS -->
+        <section id="secao-servicos-mobile" class="parallax">
+            <div id="tabela-vertical">
+                <img src="/Assets/img/tabela-vertical.JPG" alt="" id="tabela-vertical-img">
+                <div id="botao-tabela">
+                    <a href="#secao-agenda-mobile"><button id="botao-tabela__link">AGENDA</button></a>
                 </div>
             </div>
         </section>
-        <!-- Seção de Quem Somos -->
-        <section id="secao-quemSomos" class="parallax">
-            <p id="titulo-quemSomos">Nossa História</p>
-
+        <!-- SEÇÃO AGENDA -->
+        <section id="secao-agenda-mobile" class="parallax">
+        </section>
+        <!-- SEÇÃO QUEM SOMOS -->
+        <section id="secao-quemSomos-mobile" class="parallax">
         </section>
     </main>
-    <!-- Rodapé -->
-    <footer id="rodape">
-        <div id="rodape-conteudos">
-            <p id="rodape-conteudo-titulo">LOCALIZAÇÃO</p>
-            <a id="link-imagem-maps"
-                href="https://www.google.com/maps/place/Rua+Anizio+Ortiz+Monteiro,+50+-+Centro,+Taubat%C3%A9+-+SP,+12010-000/@-23.024226,-45.560635,17z/data=!3m1!4b1!4m6!3m5!1s0x94ccf901a83c439d:0x95a87c8c07e51a0e!8m2!3d-23.024226!4d-45.560635!16s%2Fg%2F11c4q3g7tm?entry=ttu">Clique
-                aqui <i class="fa-solid fa-location-dot"></i></a>
-        </div>
-        <div id="rodape-conteudos-barra">
-            <p id="rodape-conteudo-titulo">ENDEREÇO</p>
-            <p id="rodape-texto">Rua Anízio Ortiz Monteiro,590</p>
-            <p id="rodape-texto"> Centro-Taubaté-SP 12010-0000</p>
-            <p id="rodape-texto">Tel. (12) 3633-3939</p>
-        </div>
-        <div id="rodape-conteudos-barra">
-            <p id="rodape-conteudo-titulo">HORÁRIO DE FUNCIONAMENTO</p>
-            <p id="rodape-texto">Seg. à Sex. - 10:00 às 22:00</p>
-            <p id="rodape-texto"> Sábados - 08:00 às 22:00</p>
-            <p id="rodape-texto">Fechado aos Domingos e Feriados</p>
-        </div>
-        <div id="rodape-conteudos-barra">
-            <p id="rodape-conteudo-titulo">REDES SOCIAIS</p>
-            <div id="icones-redes">
-                <i class="fa-brands fa-facebook" id="rodape-icone"></i>
-                <i class="fa-brands fa-instagram" id="rodape-icone"></i>
-                <i class="fa-brands fa-youtube" id="rodape-icone"></i>
-                <i class="fa-brands fa-twitter" id="rodape-icone"></i>
-            </div>
-            <p id="rodape-texto-direitos-reservados">© 2023 por Barber Shop. Criado por LP Desenvolvimentos</p>
-        </div>
-    </footer>
-
-    <!-- Inclusão do Kit de Font Awesome -->
+    <!-- RODAPÉ -->
+    <footer id="rodape-mobile"></footer>
+    <!-- FONT AWESOME  -->
     <script src="https://kit.fontawesome.com/95932c07d1.js" crossorigin="anonymous"></script>
-    <!-- Link javaScript -->
+    <!-- JAVASCRIPT -->
     <script src="/Assets/js/script.js"></script>
 </body>
 

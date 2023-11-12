@@ -1,0 +1,269 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "barber";
+  src: url(/Assets/fonts/RichTheBarberPersonalUse-gx824.ttf);
+}
+@font-face {
+  font-family: "Queen";
+  src: url(/Assets/fonts/Queensides-3z7Ey.ttf);
+}
+@font-face {
+  font-family: "ananda";
+  src: url(/Assets/fonts/AnandaBlackPersonalUseRegular-rg9Rx.ttf);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+@media screen and (max-width: 768px) {
+  /* NAVBAR MOBILE*/
+  #navegacao-mobile {
+    position: fixed;
+    width: 100%;
+    height: 15vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* LOGOTIPO*/
+    /*BOTÃO TOGGLE*/
+    /*MENU MOBILE*/
+  }
+  #navegacao-mobile #logo {
+    min-height: 10vh;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 40px;
+  }
+  #navegacao-mobile #logo #logo-texto {
+    font-family: "barber";
+    color: #fff;
+    font-size: 40px;
+    border-top: #fff 1px solid;
+    border-bottom: #fff 1px solid;
+  }
+  #navegacao-mobile #logo #logo-texto:hover {
+    color: #EFB43A;
+    transition: 3ms;
+    cursor: pointer;
+  }
+  #navegacao-mobile #logo #logo-since {
+    color: #fff;
+    font-family: "Queen";
+  }
+  #navegacao-mobile .menu-toggle {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #navegacao-mobile .menu-toggle.active .fa-bars {
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+  #navegacao-mobile .menu-toggle.active .fa-xmark {
+    opacity: 1;
+  }
+  #navegacao-mobile .fa-bars,
+  #navegacao-mobile .fa-xmark {
+    position: absolute;
+    font-size: 40px;
+    transition: 0.3s;
+  }
+  #navegacao-mobile .fa-xmark {
+    opacity: 0;
+  }
+  #navegacao-mobile .menu-mobile {
+    display: none;
+    /* Adicione estilos do menu aqui */
+  }
+  #navegacao-mobile .menu-mobile.active {
+    position: absolute;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.97);
+    top: 15vh;
+  }
+  #navegacao-mobile .menu-mobile.active #lista-mobile {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-between;
+  }
+  #navegacao-mobile .menu-mobile.active #lista-mobile #lista-mobile__menu {
+    width: 100%;
+    height: 15vh;
+    color: #fff;
+    font-family: "Queen";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: #fff;
+  }
+  #navegacao-mobile .menu-mobile.active #lista-mobile #lista-mobile__menu #lista-mobile__link {
+    text-decoration: none;
+    color: #fff;
+    font-family: "Queen";
+    margin-left: 24px;
+  }
+  #navegacao-mobile .menu-mobile.active #lista-mobile #lista-mobile__menu .icones-menu {
+    margin-left: 10vw;
+  }
+  /* PRINCIPAL */
+  #principal {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Estilos para as seções com efeito de parallax */
+    /* HOME MOBILE */
+    /* SERVIÇOS MOBILE */
+    /* Estilos para as seções 'AGENDA' */
+    /* Estilos para as seções 'QUEM SOMOS' */
+  }
+  #principal .parallax {
+    height: 100vh;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  #principal #secao-home-mobile {
+    background-image: url(/Assets/img/banner.jpg);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* TEXTO BANNER */
+  }
+  #principal #secao-home-mobile #banner {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* REDES SOCIAIS */
+    /* TEXTO BANNER */
+    /* BOTÃO BANNER 'SERVIÇOS' */
+  }
+  #principal #secao-home-mobile #banner #icone-redes {
+    margin-bottom: 80px;
+  }
+  #principal #secao-home-mobile #banner #icone-redes .fa-brands {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 16px;
+  }
+  #principal #secao-home-mobile #banner #texto-banner-small {
+    color: #fff;
+    font-family: "Queen";
+    font-size: 20px;
+  }
+  #principal #secao-home-mobile #banner #texto-banner-bold {
+    color: #fff;
+    font-family: "Queen";
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 80px;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+  #principal #secao-home-mobile #banner #botao-banner {
+    width: 240px;
+    height: 60px;
+    background-color: #EFB43A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #principal #secao-home-mobile #banner #botao-banner #botao-banner-servico {
+    background-color: #EFB43A;
+    border: #242424 1px solid;
+    width: 230px;
+    height: 50px;
+    font-family: "Queen";
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  #principal #secao-home-mobile #banner #botao-banner #botao-banner-servico:hover {
+    color: #fff;
+    transition: 3ms;
+    background-color: #f3b02b;
+    cursor: pointer;
+  }
+  #principal #secao-servicos-mobile {
+    background-image: url(/Assets/img/img-fundo-servico.jpg);
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #principal #secao-servicos-mobile #tabela-vertical {
+    width: 96%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #principal #secao-servicos-mobile #tabela-vertical #tabela-vertical-img {
+    width: 100%;
+    height: auto;
+  }
+  #principal #secao-servicos-mobile #botao-tabela {
+    margin-top: 24px;
+    width: 240px;
+    height: 60px;
+    background-color: #EFB43A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #principal #secao-servicos-mobile #botao-tabela__link {
+    background-color: #EFB43A;
+    border: #242424 1px solid;
+    width: 230px;
+    height: 50px;
+    font-family: "Queen";
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  #principal #secao-servicos-mobile #botao-tabela__link:hover {
+    color: #fff;
+    transition: 3ms;
+    background-color: #f3b02b;
+    cursor: pointer;
+  }
+  #principal #secao-agenda-mobile {
+    background-image: url(/Assets/img/img-fundo-agenda.jpg);
+    width: 100%;
+  }
+  #principal #secao-quemSomos-mobile {
+    background-image: url(/Assets/img/quesomos-fundo.jpg);
+    width: 100%;
+    height: 90vh;
+  }
+  #rodape-mobile {
+    width: 100%;
+    height: 10vh;
+    background-color: #242424;
+  }
+}/*# sourceMappingURL=style-responsive.css.map */
