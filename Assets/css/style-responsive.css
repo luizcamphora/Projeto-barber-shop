@@ -80,10 +80,6 @@ html {
     opacity: 0;
   }
   #navegacao-mobile .menu-mobile {
-    display: none;
-    /* Adicione estilos do menu aqui */
-  }
-  #navegacao-mobile .menu-mobile.active {
     position: absolute;
     width: 100%;
     height: 85vh;
@@ -92,9 +88,10 @@ html {
     align-items: center;
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.97);
-    top: 15vh;
+    top: -100vh;
+    transition: transform 1s ease-in-out;
   }
-  #navegacao-mobile .menu-mobile.active #lista-mobile {
+  #navegacao-mobile .menu-mobile #lista-mobile {
     width: 100%;
     height: 60vh;
     display: flex;
@@ -102,24 +99,24 @@ html {
     align-items: start;
     justify-content: space-between;
   }
-  #navegacao-mobile .menu-mobile.active #lista-mobile #lista-mobile__menu {
-    width: 100%;
-    height: 15vh;
+  #navegacao-mobile .menu-mobile #lista-mobile #lista-mobile__menu {
     color: #fff;
     font-family: "Queen";
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     border-bottom: #fff;
   }
-  #navegacao-mobile .menu-mobile.active #lista-mobile #lista-mobile__menu #lista-mobile__link {
+  #navegacao-mobile .menu-mobile #lista-mobile #lista-mobile__menu #lista-mobile__link {
     text-decoration: none;
     color: #fff;
     font-family: "Queen";
     margin-left: 24px;
   }
-  #navegacao-mobile .menu-mobile.active #lista-mobile #lista-mobile__menu .icones-menu {
-    margin-left: 10vw;
+  #navegacao-mobile .menu-mobile.active {
+    position: absolute;
+    transform: translateY(100vh);
+    margin-top: 15vh;
   }
   /* PRINCIPAL */
   #principal {
