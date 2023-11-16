@@ -25,6 +25,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 5;
     /* LOGOTIPO*/
     /*BOTÃO TOGGLE*/
     /*MENU MOBILE*/
@@ -96,7 +97,7 @@ html {
     height: 60vh;
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: space-between;
   }
   #navegacao-mobile .menu-mobile #lista-mobile #lista-mobile__menu {
@@ -127,7 +128,7 @@ html {
     /* Estilos para as seções com efeito de parallax */
     /* HOME MOBILE */
     /* SERVIÇOS MOBILE */
-    /* Estilos para as seções 'AGENDA' */
+    /* SEÇÃO AGENDA */
     /* Estilos para as seções 'QUEM SOMOS' */
   }
   #principal .parallax {
@@ -252,6 +253,207 @@ html {
   #principal #secao-agenda-mobile {
     background-image: url(/Assets/img/img-fundo-agenda.jpg);
     width: 100%;
+    height: 100vh;
+    transition: right 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* SEÇÃO AGENDA - [SERVIÇOS] */
+    /* SEÇÃO AGENDA - CALENDÁRIO */
+    /* SEÇÃO AGENDA - HORA */
+    /* SEÇÃO AGENDA - DETALHES */
+  }
+  #principal #secao-agenda-mobile #agenda-servico {
+    position: absolute;
+    width: 90%;
+    height: 60vh;
+    background-color: rgba(0, 0, 0, 0.97);
+    z-index: 4;
+    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* SERVIÇOS TITULO */
+    /* BARBA */
+    /* CABELO */
+    /* BOTÃO SERVIÇOS */
+  }
+  #principal #secao-agenda-mobile #agenda-servico #titulo-servicos {
+    font-family: "Queen";
+    font-size: 24px;
+    color: #EFB43A;
+    margin-top: 8px;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #barba {
+    width: 90%;
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Queen";
+    /* BARBA TITULO */
+    /* CHECKBOX TRADICIONAL */
+    /* CHECKBOX HIDRATAÇÃO */
+  }
+  #principal #secao-agenda-mobile #agenda-servico #barba #titulo-barba {
+    color: #EFB43A;
+    font-family: "Queen";
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #barba #barba-tradicional {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    border-bottom: dashed #EFB43A 1px;
+    /* CHECKBOX DESENHADA */
+  }
+  #principal #secao-agenda-mobile #agenda-servico #barba #barba-desenhada {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    border-bottom: dashed #EFB43A 1px;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #barba #barba-hidratacao {
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    border-bottom: dashed #EFB43A 1px;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #cabelo {
+    width: 90%;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Queen";
+    /* TÍTUMO CABELO */
+    /* CHECKBOX CORTE */
+    /* CHECKBOX PEZINHO */
+    /* CHECKBOX MAQUINA */
+    /* CHECKBOX DESENHO */
+    /* CHECKBOX TINTURA */
+  }
+  #principal #secao-agenda-mobile #agenda-servico #cabelo #titulo-cabelo {
+    color: #EFB43A;
+    font-family: "Queen";
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #cabelo #cabelo-corte {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    height: 5vh;
+    border-bottom: dashed #EFB43A 1px;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #cabelo #cabelo-pezinho {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    height: 5vh;
+    border-bottom: dashed #EFB43A 1px;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #cabelo #cabelo-maquina {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    height: 5vh;
+    border-bottom: dashed #EFB43A 1px;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #cabelo #cabelo-desenho {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    height: 5vh;
+    border-bottom: dashed #EFB43A 1px;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #cabelo #cabelo-tintura {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+    height: 5vh;
+    border-bottom: dashed #EFB43A 1px;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #botao-servico {
+    width: 90%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #botao-servico #margem-botao-servico {
+    width: 240px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EFB43A;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #botao-servico #margem-botao-servico #botao-proximo-servico {
+    background-color: #EFB43A;
+    border: #242424 1px solid;
+    width: 230px;
+    height: 50px;
+    font-family: "Queen";
+    font-size: 24px;
+    font-weight: bolder;
+    text-align: center;
+  }
+  #principal #secao-agenda-mobile #agenda-servico #botao-servico #margem-botao-servico #botao-proximo-servico:active {
+    color: #fff;
+  }
+  #principal #secao-agenda-mobile #agenda-calendario {
+    position: absolute;
+    width: 90%;
+    height: 60vh;
+    background-color: rgb(145, 224, 17);
+    z-index: 3;
+    transition: transform 0.5s ease;
+  }
+  #principal #secao-agenda-mobile #agenda-hora {
+    position: absolute;
+    width: 90%;
+    height: 60vh;
+    background-color: rgb(17, 89, 224);
+    z-index: 2;
+    transition: transform 0.5s ease;
+  }
+  #principal #secao-agenda-mobile #agenda-detalhes {
+    position: absolute;
+    width: 90%;
+    height: 60vh;
+    background-color: rgb(217, 17, 224);
+    z-index: 1;
+    transition: transform 0.5s ease;
+  }
+  #principal #secao-agenda-mobile .deslocar-direita {
+    transform: translateX(-100vw);
+  }
+  #principal #secao-agenda-mobile .deslocar-esquerda {
+    transform: translateX(100vw);
   }
   #principal #secao-quemSomos-mobile {
     background-image: url(/Assets/img/quesomos-fundo.jpg);

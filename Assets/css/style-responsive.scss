@@ -30,6 +30,7 @@ html {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        z-index: 5;
 
         /* LOGOTIPO*/
         #logo {
@@ -61,7 +62,6 @@ html {
             }
         }
 
-
         /*BOTÃO TOGGLE*/
         .menu-toggle {
             position: relative;
@@ -72,6 +72,7 @@ html {
             align-items: center;
             justify-content: center;
         }
+
         .menu-toggle.active .fa-bars {
             transform: rotate(180deg);
             opacity: 0;
@@ -86,13 +87,14 @@ html {
             position: absolute;
             font-size: 40px;
             transition: 0.3s;
-        }  
+        }
+
         .fa-xmark {
             opacity: 0;
         }
 
         /*MENU MOBILE*/
-        .menu-mobile{
+        .menu-mobile {
             position: absolute;
             width: 100%;
             height: 85vh;
@@ -103,14 +105,15 @@ html {
             background-color: rgba(0, 0, 0, 0.97);
             top: -100vh;
             transition: transform 1s ease-in-out;
+
             #lista-mobile {
                 width: 100%;
                 height: 60vh;
                 display: flex;
                 flex-direction: column;
-                align-items: start;
+                align-items: center;
                 justify-content: space-between;
-                
+
                 #lista-mobile__menu {
                     color: #fff;
                     font-family: 'Queen';
@@ -128,13 +131,15 @@ html {
                 }
             }
         }
+
         .menu-mobile.active {
             position: absolute;
             transform: translateY(100vh);
             margin-top: 15vh;
-      
+
         }
     }
+
     /* PRINCIPAL */
 
     #principal {
@@ -283,10 +288,218 @@ html {
             }
         }
 
-        /* Estilos para as seções 'AGENDA' */
+        /* SEÇÃO AGENDA */
         #secao-agenda-mobile {
             background-image: url(/Assets/img/img-fundo-agenda.jpg);
             width: 100%;
+            height: 100vh;
+            transition: right 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+
+            /* SEÇÃO AGENDA - [SERVIÇOS] */
+            #agenda-servico {
+                position: absolute;
+                width: 90%;
+                height: 60vh;
+                background-color: rgba(0, 0, 0, 0.97);
+                z-index: 4;
+                transition: transform 0.5s ease;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                /* SERVIÇOS TITULO */
+                #titulo-servicos{
+                    font-family: 'Queen';
+                    font-size: 24px;
+                    color: #EFB43A;
+                    margin-top: 8px;
+                }
+                /* BARBA */
+                #barba{
+                    width: 90%;
+                    height: 15vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-family: 'Queen';
+                    /* BARBA TITULO */
+                    #titulo-barba{
+                        color: #EFB43A;
+                        font-family: 'Queen';
+                        font-weight: bold;
+                        margin-bottom: 8px;
+                    }
+                    /* CHECKBOX TRADICIONAL */
+                    #barba-tradicional{
+                        width: 100%;
+                        height: 5vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #fff;
+                        border-bottom: dashed #EFB43A 1px ;
+                    /* CHECKBOX DESENHADA */
+                    }
+                    #barba-desenhada{
+                        width: 100%;
+                        height: 5vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #fff;
+                        border-bottom: dashed #EFB43A 1px ;
+                    }
+                    /* CHECKBOX HIDRATAÇÃO */
+                    #barba-hidratacao{
+                        width: 100%;
+                        height: 5vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #fff;
+                        border-bottom: dashed #EFB43A 1px ;
+                    }
+                }
+                /* CABELO */
+                #cabelo{
+                    width: 90%;
+                    height: 25vh;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-family: 'Queen';
+                    /* TÍTUMO CABELO */
+                    #titulo-cabelo{
+                        color: #EFB43A;
+                        font-family: 'Queen';
+                        font-weight: bold;
+                        margin-bottom: 8px;
+                    }
+                    /* CHECKBOX CORTE */
+                    #cabelo-corte{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #fff;
+                        height: 5vh;
+                        border-bottom: dashed #EFB43A 1px ;
+                    }
+                    /* CHECKBOX PEZINHO */
+                    #cabelo-pezinho{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #fff;
+                        height: 5vh;
+                        border-bottom: dashed #EFB43A 1px ;
+                    }
+                    /* CHECKBOX MAQUINA */
+                    #cabelo-maquina{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #fff;
+                        height: 5vh;
+                        border-bottom: dashed #EFB43A 1px ;
+                    }
+                    /* CHECKBOX DESENHO */
+                    #cabelo-desenho{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #fff;
+                        height: 5vh;
+                        border-bottom: dashed #EFB43A 1px ;
+                    }
+                    /* CHECKBOX TINTURA */
+                    #cabelo-tintura{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        color: #fff;
+                        height: 5vh;
+                        border-bottom: dashed #EFB43A 1px ;
+                    }
+                    
+                }
+                /* BOTÃO SERVIÇOS */
+                #botao-servico{
+                    width: 90%;
+                    height: 10vh;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    #margem-botao-servico{
+                        width: 240px;
+                        height: 60px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #EFB43A;
+                        #botao-proximo-servico{
+                            background-color: #EFB43A;
+                            border: #242424 1px solid;
+                            width: 230px;
+                            height: 50px;
+                            font-family: 'Queen';
+                            font-size: 24px;
+                            font-weight: bolder;
+                            text-align: center;
+                            &:active{
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                }
+            }
+            /* SEÇÃO AGENDA - CALENDÁRIO */
+            #agenda-calendario {
+                position: absolute;
+                width: 90%;
+                height: 60vh;
+                background-color: rgb(145, 224, 17);
+                z-index: 3;
+                transition: transform 0.5s ease;
+
+
+            }
+            /* SEÇÃO AGENDA - HORA */
+            #agenda-hora{
+                position: absolute;
+                width: 90%;
+                height: 60vh;
+                background-color: rgb(17, 89, 224);
+                z-index: 2;
+                transition: transform 0.5s ease;
+            }
+            /* SEÇÃO AGENDA - DETALHES */
+            #agenda-detalhes{
+                position: absolute;
+                width: 90%;
+                height: 60vh;
+                background-color: rgb(217, 17, 224);
+                z-index: 1;
+                transition: transform 0.5s ease;
+            }
+            .deslocar-direita {
+                transform: translateX(-100vw);
+            }
+            
+            .deslocar-esquerda {
+                transform: translateX(100vw);
+            }            
         }
 
         /* Estilos para as seções 'QUEM SOMOS' */
